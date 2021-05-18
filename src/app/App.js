@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import SneksPage from '../sneks/SneksPage';
+import SnekDetailPage from '../sneks/snek-details';
 import {
   BrowserRouter as Router,
   Route,
@@ -28,13 +30,13 @@ class App extends Component {
 
               <Route path="/sneks" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <SneksPage {...routerProps} />
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/sneks/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <SnekDetailPage {...routerProps.match.params.id} />
                 )}
               />
 
