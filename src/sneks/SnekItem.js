@@ -8,6 +8,7 @@ class SnekItem extends Component {
     return (
       <li className="SnekItem">
         <h2>{snek.name}</h2>
+        <h2>{snek.type}</h2>
 
       </li>
     );
