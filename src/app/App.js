@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import SnekItem from '../sneks/SnekItem.js';
 import SnekList from '../sneks/SnekList.js;';
-import SneksPage from '../sneks/SneksPage.js';
+import SneksPage from '../sneks/SneksPage';
 import {
   BrowserRouter as Router,
   Route,

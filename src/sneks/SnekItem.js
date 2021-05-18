@@ -1,11 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class snekItem extends Component {
+class SnekItem extends Component {
+
   render() {
-    return (
-      <div>
+    const snek = this.props.snek;
 
-      </div>
-    )
+    return (
+      <li className="SnekItem">
+        <h2>{snek.name}</h2>
+
+      </li>
+    );
   }
+
 }
+
+export default SnekItem;
