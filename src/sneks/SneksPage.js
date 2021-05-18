@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SnekList from './SnekList';
+import SnekItem from './SnekItem';
 
 export default class SneksPage extends Component {
   state = {
