@@ -45,7 +45,7 @@ class App extends Component {
 
               <Route path="/sneks/:id"
                 render={routerProps => (
-                  <SnekDetailPage {...routerProps.match.params.id} />
+                  <SnekDetailPage {...routerProps} />
                 )}
               />
 
