@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import './Loader.css';
 
 export default class Loader extends Component {
 
