@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SnekItem extends Component {
 
@@ -7,8 +8,11 @@ class SnekItem extends Component {
 
     return (
       <li className="SnekItem">
-        <h2>{snek.name}</h2>
-        <h2>{snek.type}</h2>
+        <Link to={`/sneks/${snek.id}`}>
+          <h2>{snek.name}</h2>
+
+          <p>Type: {snek.type}</p>
+        </Link>
 
       </li>
     );
