@@ -43,7 +43,7 @@ class App extends Component {
               />
 
 
-              <Route path="/sneks/:id"
+              <Route path="/sneks/:id" exact={true}
                 render={routerProps => (
                   <SnekDetailPage {...routerProps} />
                 )}

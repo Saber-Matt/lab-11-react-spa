@@ -5,14 +5,16 @@ import { getSnek, updateSnek } from './utils/sneks-api';
 
 export default class EditSneks extends Component {
   state = {
-    Snek: null,
+    snek: null,
     loading: true
   }
 
   async componentDidMount() {
+    //console.log('hello');
     const { match } = this.props;
     try {
       const snek = await getSnek(match.params.id);
+      console.log(snek);
       this.setState({ snek: snek });
     }
     catch (err) {

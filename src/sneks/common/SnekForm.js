@@ -12,10 +12,12 @@ export default class SnekForm extends Component {
   }
 
   componentDidMount() {
+    console.log('hello');
     const { snek } = this.props;
     if (!snek) { return; }
 
     this.setState(snek);
+    console.log(this.state);
   }
 
   handleSubmit = e => {
