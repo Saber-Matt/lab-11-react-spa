@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SnekList from './SnekList';
 //import SnekItem from './SnekItem';
-import Loader from '../common/Loader';
+import Loader from './common/Loader.js';
 import { getSneks } from '../utils/sneks-api';
 
 export default class SneksPage extends Component {

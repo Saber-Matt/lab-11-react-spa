@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Loader from '../common/Loader';
+import Loader from './common/Loader';
 import { Link } from 'react-router-dom';
 import { getSnek, deleteSnek } from '../utils/sneks-api';
 

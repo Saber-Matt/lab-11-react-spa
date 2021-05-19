@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import SnekForm from '../common/SnekForm';
-import { getSnek, updateSnek } from '../utils/sneks-api';
+import SnekForm from './sneks/common/SnekForm';
+import { getSnek, updateSnek } from './utils/sneks-api';
 
 
 export default class EditSneks extends Component {

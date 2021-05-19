@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import SnekForm from '../common/SnekForm';
-import { addSnek } from '../utils/sneks-api';
+import SnekForm from './sneks/common/SnekForm';
+import { addSnek } from './utils/sneks-api';
 
 export default class AddSneks extends Component {
   state = {
