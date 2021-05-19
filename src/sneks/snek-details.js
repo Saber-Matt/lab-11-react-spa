@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Loader from '../common/Loader';
 import { Link } from 'react-router-dom';
 import { getSnek, deleteSnek } from '../utils/sneks-api';
-import './SnekDetailPage.css';
+
 
 export default class SnekDetailPage extends Component {
   state = {

@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Home from '../home/Home';
 import SneksPage from '../sneks/SneksPage';
 import SnekDetailPage from '../sneks/snek-details';
+import AddSneks from '../AddSnek';
+import EditSneks from '../EditSneks';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,12 +36,24 @@ class App extends Component {
                 )}
               />
 
+              <Route path="/sneks/add" exact={true}
+                render={routerProps => (
+                  <AddSneks {...routerProps} />
+                )}
+              />
+
+
               <Route path="/sneks/:id"
                 render={routerProps => (
                   <SnekDetailPage {...routerProps.match.params.id} />
                 )}
               />
 
+              <Route path="/sneks/:id/edit" exact={true}
+                render={routerProps => (
+                  <EditSneks {...routerProps} />
+                )}
+              />
               <Redirect to="/" />
 
             </Switch>
