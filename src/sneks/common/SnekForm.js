@@ -81,5 +81,53 @@ export default class SnekForm extends Component {
             </select>
           </label>
         </p>
-        <form />}
-);
+
+        <p>
+          <label>
+            <span>Accessories</span>
+            <select name="accessory" required
+              value={accessory}
+              onChange={this.handleChangeAccessor}
+            >
+              <option>sweater</option>
+              <option>top hat</option>
+              <option>Bolt</option>
+              <option>dual-wield short sword</option>
+              <option>jeweled necklace</option>
+              <option>'being adorable</option>
+              <option>poke-esk card</option>
+              <option>giraffe headband</option>
+            </select>
+          </label>
+        </p>
+        <p>
+          <label>
+            <span>Which Snek is your favorite?</span>
+            <input name="name" required pattern="\d{4}"
+              name="Select from our list of Sneks"
+              placeholder="Top Hat Cober"
+              value={name} onChange={this.handleChangeName}
+            />
+          </label>
+        </p>
+
+        <p>
+          <label>
+            <span>Has this one the potency of venom?</span>
+            <span>
+              <input name="isDeadlyWithTheVenom"
+                type="checkbox"
+                value={isDeadlyWithTheVenom} onChange={this.handleChangeIsSidekick}
+              /> Yes
+            </span>
+          </label>
+        </p>
+
+        <p>
+          <button>{snek ? 'Update' : 'Add'} Snek</button>
+        </p>
+
+      </form>
+    );
+  }
+}
