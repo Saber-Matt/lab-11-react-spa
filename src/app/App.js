@@ -3,7 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import SneksPage from '../sneks/SneksPage';
-import SnekDetailPage from '../sneks/snek-details';
+import SnekDetailPage from '../sneks/SnekDetailss.js';
+import AddSneks from '../AddSnek';
+import EditSneks from '../EditSneks';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,9 +36,23 @@ class App extends Component {
                 )}
               />
 
-              <Route path="/sneks/:id"
+              <Route path="/sneks/add" exact={true}
                 render={routerProps => (
-                  <SnekDetailPage {...routerProps.match.params.id} />
+                  <AddSneks {...routerProps} />
+                )}
+              />
+
+
+
+              <Route path="/sneks/:id" exact={true}
+                render={routerProps => (
+                  <SnekDetailPage {...routerProps} />
+                )}
+              />
+
+              <Route path="/sneks/:id/edit" exact={true}
+                render={routerProps => (
+                  <EditSneks {...routerProps} />
                 )}
               />
 

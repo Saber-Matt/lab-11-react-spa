@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = '/api/snekss';
+const URL = 'https://lit-badlands-03393.herokuapp.com/api/sneks';
 
 export async function getSneks() {
   const response = await request.get(URL);
