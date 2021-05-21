@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import SnekForm from './sneks/common/SnekForm';
-import { getSnek, updateSnek } from './utils/sneks-api';
+import SnekForm from './sneks/common/SnekForm.js';
+import { getSnek, updateSnek } from './utils/sneks-api.js';
 
 
 export default class EditSneks extends Component {
@@ -12,10 +12,12 @@ export default class EditSneks extends Component {
   async componentDidMount() {
     //console.log('hello');
     const { match } = this.props;
+
     try {
       const snek = await getSnek(match.params.id);
-      console.log(snek);
+
       this.setState({ snek: snek });
+      console.log('hello');
     }
     catch (err) {
       console.log(err.message);
@@ -41,7 +43,7 @@ export default class EditSneks extends Component {
 
   render() {
     const { snek } = this.state;
-
+    console.log(snek);
     return (
       <div className="SnekEditPage">
         <h2>Edit Snek</h2>

@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
 import SneksPage from '../sneks/SneksPage';
-import SnekDetailPage from '../sneks/snek-details';
+import SnekDetailPage from '../sneks/SnekDetailss.js';
 import AddSneks from '../AddSnek';
 import EditSneks from '../EditSneks';
 import {
@@ -43,6 +43,7 @@ class App extends Component {
               />
 
 
+
               <Route path="/sneks/:id" exact={true}
                 render={routerProps => (
                   <SnekDetailPage {...routerProps} />
@@ -54,6 +55,7 @@ class App extends Component {
                   <EditSneks {...routerProps} />
                 )}
               />
+
               <Redirect to="/" />
 
             </Switch>

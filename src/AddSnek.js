@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import SnekForm from './sneks/common/SnekForm';
+import SnekForm from './sneks/common/SnekForm.js';
 import { addSnek } from './utils/sneks-api';
 
 export default class AddSneks extends Component {

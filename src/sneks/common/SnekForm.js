@@ -1,11 +1,11 @@
 import { Component } from 'react';
-import './SnekForm.css';
+
 
 export default class SnekForm extends Component {
   state = {
     name: '',
     type: '',
-    url: '',
+    url: 'https:placekitten.com/',
     species: '',
     accessory: '',
     isDeadlyWithTheVenom: true
@@ -51,9 +51,9 @@ export default class SnekForm extends Component {
   }
 
   render() {
-    const { name, type, url, species, accessory, isDeadlyWithTheVenom } = this.state;
+    const { name, type, url, accessory, isDeadlyWithTheVenom } = this.state;
     const { snek } = this.props;
-
+    console.log(this.state);
     return (
       <form className="SnekForm" onSubmit={this.handleSubmit}>
         <p>
@@ -89,7 +89,7 @@ export default class SnekForm extends Component {
             <span>Accessories</span>
             <select name="accessory" required
               value={accessory}
-              onChange={this.handleChangeAccessor}
+              onChange={this.handleChangeAccessory}
             >
               <option>sweater</option>
               <option>top hat</option>
@@ -104,11 +104,11 @@ export default class SnekForm extends Component {
         </p>
         <p>
           <label>
-            <span>Which Snek is your favorite?</span>
-            <input name="name" required pattern="\d{4}"
-              name="Select from our list of Sneks"
+            <span>Snek Image</span>
+            <input name="name" required
+              //name="Select from our list of Sneks"
               placeholder="Top Hat Cober"
-              value={name} onChange={this.handleChangeName}
+              value={url} onChange={this.handleChangeUrl}
             />
           </label>
         </p>
